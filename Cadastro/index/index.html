@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="cadastro" id="cadastro">
+        <form>
+            <label for="id">Id:</label >
+            <input type="text" name="id" id="id" required>
+            <br><br>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required>
+            <br><br>
+            <label for="telefone">Telefone:</label>
+            <input type="text" name="telefone" id="telefone" required>
+            <br><br>
+            <label for="endereco">Endereço:</label>
+            <input type="text" name="endereco" id="endereco" required>
+            <br><br>
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="cidade" id="cidade" required>
+            <br><br>
+            <label for="estado">Estado:</label>
+            <input type="text" name="estado" id="estado" required>
+            <br><br>
+            <button id="submit">Cadastrar</button>
+        </form>
+    </div>
+
+
+    <h2>Itens Cadastrados</h2>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Endereço</th>
+                <th>Cidade</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Carregar usando o JavaScript -->
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+<script>
+    document.getElementById("cadastro").addEventListener("submit", function(event) {
+        event.preventDefault(); // Impede o envio do formulário
+    
+        // Obtém os valores do formulário
+        var id = document.getElementById("id").value;
+        var nome = document.getElementById("nome").value;
+        var telefone = document.getElementById("telefone").value;
+        var endereco = document.getElementById("endereco").value;
+        var cidade = document.getElementById("cidade").value;
+        var estado = document.getElementById("estado").value;
+        // Cria um objeto para representar o produto
+        var produto = {
+            id: id,
+            nome: nome,
+            telefone: telefone,
+            endereco: endereco,
+            cidade: cidade,
+            estado: estado
+            
+            
+        };
+        console.log(produto)
+ 
+    });
+    </script>
+    
+<script> src="java.js"</script>
+</html>
+
